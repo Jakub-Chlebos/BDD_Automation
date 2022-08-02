@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="101.102">
+    <testcase classname="Authentication to e-shop" name="Authentication - positive flow" time="15.856">
+        <system-out>
+            <![CDATA[Given Home page is opened...................................................passed
+When I click Sign in link in top menu.......................................passed
+And I fill login field "testUser12345@test.pl"..............................passed
+And I fill password field "password1234"....................................passed
+And I click Sign in button..................................................passed
+Then I can see page for authenticated user..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Authentication to e-shop" name="Authetnication - negative flow" time="16.673">
+        <failure message="Error message is not as expected" type="java.lang.AssertionError">
+            <![CDATA[Given Home page is opened...................................................passed
+When I click Sign in link in top menu.......................................passed
+And I fill login field ""...................................................passed
+And I fill password field ""................................................passed
+And I click Sign in button..................................................passed
+Then I can see message "An email address is required."......................failed
+
+StackTrace:
+java.lang.AssertionError: Error message is not as expected
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:26)
+	at com.sda.zdtestpol100.steps.AuthenticationStepdefs.iCanSeeMessage(AuthenticationStepdefs.java:62)
+	at ✽.I can see message "An email address is required."(file:///D:/SDA_Tools/zdtestpol100/src/test/resources/features/authentication.feature:29)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Authentication to e-shop" name="Authetnication - negative flow 2" time="13.547">
+        <failure message="unknown error: unexpected command response&#10;  (Session info: chrome=103.0.5060.134)&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'DESKTOP-1MCD6JV', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [588edbc400197e4820917c6843a21ef8, clickElement {id=04b461dd-ac46-40c9-a71f-59f426f60e6c}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Kuba\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:54318}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54318/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (588edbc400197e4820917c6843a21ef8)] -&gt; link text: Sign in]&#10;Session ID: 588edbc400197e4820917c6843a21ef8" type="org.openqa.selenium.WebDriverException">
+            <![CDATA[Given Home page is opened...................................................passed
+When I click Sign in link in top menu.......................................failed
+And I fill login field "invalid"............................................skipped
+And I fill password field "test"............................................skipped
+And I click Sign in button..................................................skipped
+Then I can see message "Invalid email address.".............................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.134)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-1MCD6JV', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [588edbc400197e4820917c6843a21ef8, clickElement {id=04b461dd-ac46-40c9-a71f-59f426f60e6c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Kuba\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:54318}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54318/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (588edbc400197e4820917c6843a21ef8)] -> link text: Sign in]
+Session ID: 588edbc400197e4820917c6843a21ef8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy24.click(Unknown Source)
+	at com.sda.zdtestpol100.pages.HomePage.clickOnSignInLink(HomePage.java:29)
+	at com.sda.zdtestpol100.steps.AuthenticationStepdefs.iClickSignInLinkInTopMenu(AuthenticationStepdefs.java:26)
+	at ✽.I click Sign in link in top menu(file:///D:/SDA_Tools/zdtestpol100/src/test/resources/features/authentication.feature:7)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Authentication to e-shop" name="Authetnication - negative flow 3" time="20.303">
+        <system-out>
+            <![CDATA[Given Home page is opened...................................................passed
+When I click Sign in link in top menu.......................................passed
+And I fill login field "test.test.pl".......................................passed
+And I fill password field "test"............................................passed
+And I click Sign in button..................................................passed
+Then I can see message "Invalid email address.".............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Authentication to e-shop" name="Authetnication - negative flow 4" time="12.279">
+        <system-out>
+            <![CDATA[Given Home page is opened...................................................passed
+When I click Sign in link in top menu.......................................passed
+And I fill login field "test@test.pl".......................................passed
+And I fill password field ""................................................passed
+And I click Sign in button..................................................passed
+Then I can see message "Password is required."..............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Authentication to e-shop" name="Authetnication - negative flow 5" time="8.184">
+        <failure message="unknown error: unexpected command response&#10;  (Session info: chrome=103.0.5060.134)&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'DESKTOP-1MCD6JV', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [7c1d0194e668bfeba03a7e6391b05419, clickElement {id=19a08af4-5802-4914-899a-760d714f6429}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Kuba\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:54421}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54421/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (7c1d0194e668bfeba03a7e6391b05419)] -&gt; link text: Sign in]&#10;Session ID: 7c1d0194e668bfeba03a7e6391b05419" type="org.openqa.selenium.WebDriverException">
+            <![CDATA[Given Home page is opened...................................................passed
+When I click Sign in link in top menu.......................................failed
+And I fill login field "test@test.pl".......................................skipped
+And I fill password field "1"...............................................skipped
+And I click Sign in button..................................................skipped
+Then I can see message "Invalid password."..................................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.134)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-1MCD6JV', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7c1d0194e668bfeba03a7e6391b05419, clickElement {id=19a08af4-5802-4914-899a-760d714f6429}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Kuba\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:54421}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54421/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (7c1d0194e668bfeba03a7e6391b05419)] -> link text: Sign in]
+Session ID: 7c1d0194e668bfeba03a7e6391b05419
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy24.click(Unknown Source)
+	at com.sda.zdtestpol100.pages.HomePage.clickOnSignInLink(HomePage.java:29)
+	at com.sda.zdtestpol100.steps.AuthenticationStepdefs.iClickSignInLinkInTopMenu(AuthenticationStepdefs.java:26)
+	at ✽.I click Sign in link in top menu(file:///D:/SDA_Tools/zdtestpol100/src/test/resources/features/authentication.feature:7)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Authentication to e-shop" name="Authetnication - negative flow 6" time="13.648">
+        <system-out>
+            <![CDATA[Given Home page is opened...................................................passed
+When I click Sign in link in top menu.......................................passed
+And I fill login field "test@test.pl".......................................passed
+And I fill password field "111111"..........................................passed
+And I click Sign in button..................................................passed
+Then I can see message "Authentication failed.".............................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
